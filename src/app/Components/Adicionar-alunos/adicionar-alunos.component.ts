@@ -1,70 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EscolaService } from '../../services/escola.service';
+import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'app-adicionar-alunos',
+  selector: 'app-sua-componente',
   templateUrl: './adicionar-alunos.component.html',
   styleUrls: ['./adicionar-alunos.component.css']
 })
-export class AdicionarAlunoComponent implements OnInit {
-
-  escolaForm!: FormGroup;
+export class AdicionarAlunoComponent {
   enrolledStudents: any[] = [];
-submittedFormData: any;
+  novaMatricula: string = '';
+  novaSerie: string = '';
+  novoTurno: string = '';
 
-  constructor(private formBuilder: FormBuilder, private escolaService: EscolaService) {}
-
-  ngOnInit() {
-    this.initializeForm();
-    this.loadEnrolledStudents(); // Load existing enrolled students when the component initializes
-  }
-
-  initializeForm() { this.escolaForm = this.formBuilder.group({ nomeAluno: ['', Validators.required], nomeResponsavel: ['', Validators.required], dataNascimento: ['', Validators.required], serie: ['', Validators.required], dataPagamento: ['', Validators.required], cpfResponsavel: ['', Validators.required], telefone: ['', Validators.required], endereco: ['', Validators.required], cep: ['', Validators.required], identidadeAluno: ['', Validators.required], horario: ['', Validators.required], valorMensalidade: ['', Validators.required], }); }
+  adicionarNovoAluno() {
+    const novoAluno = { matricula: this.novaMatricula, serie: this.novaSerie, turno: this.novoTurno };
+    this.enrolledStudents.push(novoAluno);
 
 
-  onSubmit() {
-    if (this.escolaForm.valid) {
-      const formData = this.escolaForm.value;
-
-      this.escolaService.addAluno(formData).subscribe(
-        response => {
-
-          this.loadEnrolledStudents();
-          this.escolaForm.reset();
-        },
-        error => {
-          console.error('Erro ao enviar o formulário', error);
-        }
-      );
-    } else {
-      alert('Por favor, preencha todos os campos corretamente.');
-    }
-  }
-
-  loadEnrolledStudents() {
-    this.escolaService.getAlunos().subscribe(
-      (students: any[]) => {
-        this.enrolledStudents = students;
-      },
-      error => {
-        console.error('Error fetching students', error);
-      }
-    );
-  }
-
-  deleteStudent(id: number) {
-    if (confirm('Are you sure you want to delete this student?')) {
-      this.escolaService.deleteAluno(id).subscribe(
-        () => {
-          
-          this.loadEnrolledStudents();
-        },
-        error => {
-          console.error('Error deleting student', error);
-        }
-      );
-    }
+    this.novaMatricula = '';
+    this.novaSerie = '';
+    this.novoTurno = '';
   }
 }

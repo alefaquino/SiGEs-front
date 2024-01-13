@@ -1,0 +1,165 @@
+.barra-pesquisa button {
+  width: none;
+  height: 45px;
+  border-radius: 60%;
+  background-color: #FFF647;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease;
+  margin-top: 50px;
+  align-items: center;
+  margin-right: 110px;
+
+}
+
+.barra-pesquisa button:hover,
+.barra-pesquisa button:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+.container-externa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Ajuste conforme necessário para o seu layout */
+
+
+}
+
+.barra-pesquisa {
+  border: 2px solid #fdfcfc;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  width: 910px;
+  height: 150px;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.informacoes {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 80px;
+  width: 700px;
+  padding: 25px;
+  background-color: white;
+  height: 10px;
+  box-shadow: 0 0 10px rgba(87, 86, 86, 0.8);
+  margin-left: 30px;
+
+}
+
+.input-wrapper label,
+.input-wrapper input,
+.input-wrapper select {
+  margin-bottom: 10px;
+}
+
+.separator {
+  height: 500%;
+  width: 7px;
+  background-color: #555555;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+label {
+  margin-right: 20px;
+  color: #555555;
+  font-size: 18px;
+
+}
+
+
+#serie {
+  color: #555555;
+}
+
+#turno{
+  color: #555555;
+
+}
+
+
+
+
+input,
+select {
+  flex-grow: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  width: 130px;
+
+}
+
+input + select {
+  border-left: 1px solid #131212; /* Adiciona uma linha à esquerda do select */
+  margin-left: 10px; /* Espaçamento entre os elementos */
+}
+
+
+
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+
+}
+
+
+
+/* Estilos adicionais para os selects */
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+
+
+select::-ms-expand {
+  display: none;
+}
+select::-webkit-inner-spin-button,
+select::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.consulta {
+  padding: 40px;
+  margin-bottom: -90px;
+  margin-left: 30px;
+
+}
+
+

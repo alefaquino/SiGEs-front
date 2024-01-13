@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,17 +18,17 @@ import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
+import { BarraPesquisaComponent } from './Components/barra-pesquisa/barra-pesquisa.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,AdicionarAlunoComponent, LoginComponent,AdicionarAlunosPageComponent, InicioComponent,InicioPageComponent, SidebarComponent
+    AppComponent,AdicionarAlunoComponent, LoginComponent,AdicionarAlunosPageComponent, InicioComponent,InicioPageComponent, SidebarComponent, BarraPesquisaComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,AppRoutingModule, HttpClientModule,FormsModule,CommonModule, MatDialogModule, BrowserAnimationsModule, MatSidenavModule, MatListModule ],
+    ReactiveFormsModule,AppRoutingModule, HttpClientModule,FormsModule,CommonModule, MatDialogModule, BrowserAnimationsModule, MatSidenavModule, MatListModule ,FormsModule,],
   providers: [],
   bootstrap: [AppComponent]
 })
