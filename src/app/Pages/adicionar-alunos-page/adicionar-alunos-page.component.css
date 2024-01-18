@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh; /* Isso faz com que o container ocupe toda a altura da viewport */
+  height: 40vh; /* Isso faz com que o container ocupe toda a altura da viewport */
 }
 
 
