@@ -1,69 +1,33 @@
-#principal-container{
-    background-color: white;
-    box-shadow: 2px 2px 5px rgba(95, 95, 95, 0.3) ;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 40px;
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; /* Isso faz com que o container ocupe toda a altura da viewport */
 }
 
-#titulo-container h1{
-    font-size: 2rem;
-    font-weight: 900;
+
+label {
+  font-size: 23px;
 }
 
-hr{
-    margin-top: 20px;
+
+input {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-#form-container{
-    margin-top: 15px;
+
+.mat-datepicker-content {
+  font-size: 16px;
 }
 
-.basic-infos{
-    margin-top: 20px;
-    color: #4aa3f5;
-    font-size: 1.6em;
-}
 
-.container-50{
-    width: 50%;
-}
-
-.container-50 + mat-form-field{
-    width: 49%;
-}
-
-.container-100{
-    width: 100%;
-}
-
-.form-group{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 6px;
-}
-
-.container-70{
-    width: 69%;
-}
-
-.container-30{
-    width: 30%;
-}
-
-.submit-button{
-    background-color: #FFF647;
-    border: 0;
-    height: 55px;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 20px 0;
-    transition: all 400ms;
-}
-
-.submit-button:hover{
-    box-shadow: 3px 3px 5px rgba(48, 48, 48, 0.479);
+button {
+  font-size: 16px;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color:  #FFF647;
 }

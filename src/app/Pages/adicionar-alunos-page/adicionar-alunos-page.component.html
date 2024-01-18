@@ -1,4 +1,9 @@
-<div id="principal-container">
-    <div id="titulo-container">
-        <h1>Adicionar um aluno</h1>
+<div>
+  <label for="nomeAluno">Digite o nome do aluno:</label>
+  <input id="nomeAluno" formControlName="nomeAluno" />
 
+  <mat-datepicker [(ngModel)]="selectedDate" (dateChange)="dateChanged($event)"></mat-datepicker>
+
+
+  <button (click)="adicionarAluno()">Adicionar Aluno</button>
+</div>

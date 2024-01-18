@@ -1,17 +1,4 @@
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 50%;
-}
-
-.gray-background {
-  background-color: #E7E7E7;
-  padding: 15px;
-  border-radius: 50px;
-
-
-}
 /* You can add global styles to this file, and also import other style files */
 *{margin: 0; padding: 0; box-sizing: border-box;
     font-synthesis: none;
